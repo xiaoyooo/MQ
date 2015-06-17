@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq_Send", "RabbitMq_Send\RabbitMq_Send.csproj", "{32380A7A-CC5A-481E-BE33-A7D6F41D1BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransModel", "..\TransModel\TransModel.csproj", "{B3EBB27F-9335-488C-8430-A01DE14E4E27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq_Receiver", "..\RabbitMq_Receiver\RabbitMq_Receiver.csproj", "{8AD2AE32-130D-441B-AEB2-7FB2BEB1334A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32380A7A-CC5A-481E-BE33-A7D6F41D1BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32380A7A-CC5A-481E-BE33-A7D6F41D1BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32380A7A-CC5A-481E-BE33-A7D6F41D1BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32380A7A-CC5A-481E-BE33-A7D6F41D1BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EBB27F-9335-488C-8430-A01DE14E4E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EBB27F-9335-488C-8430-A01DE14E4E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EBB27F-9335-488C-8430-A01DE14E4E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EBB27F-9335-488C-8430-A01DE14E4E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD2AE32-130D-441B-AEB2-7FB2BEB1334A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD2AE32-130D-441B-AEB2-7FB2BEB1334A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD2AE32-130D-441B-AEB2-7FB2BEB1334A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD2AE32-130D-441B-AEB2-7FB2BEB1334A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
