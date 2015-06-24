@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B941B1C-885C-4407-8403-A3C113AECBF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MQ.Rabbit.Brain</RootNamespace>
+    <AssemblyName>MQ.Rabbit.Brain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Imports\Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\..\Imports\rabbitmq-dotnet-client-3.4.2-dotnet-3.5\bin\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.ServiceModel">
+      <HintPath>..\..\Imports\rabbitmq-dotnet-client-3.4.2-dotnet-3.5\bin\RabbitMQ.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consumers\FfListener.cs" />
+    <Compile Include="Consumers\FmListener.cs" />
+    <Compile Include="Consumers\OnewayEnd.cs" />
+    <Compile Include="Consumers\RpcServer.cs" />
+    <Compile Include="Consumers\Audience.cs" />
+    <Compile Include="Consumers\WorkDeQueue.cs" />
+    <Compile Include="Producers\FfBroadcaster.cs" />
+    <Compile Include="Producers\FmBroadcaster.cs" />
+    <Compile Include="Producers\OnewayStart.cs" />
+    <Compile Include="Producers\RpcClient.cs" />
+    <Compile Include="Producers\Reporter.cs" />
+    <Compile Include="Producers\WorkEnQueue.cs" />
+    <Compile Include="RabbitConsumer.cs" />
+    <Compile Include="RabbitConsumerFactory.cs" />
+    <Compile Include="RabbitDualConsumer.cs" />
+    <Compile Include="RabbitDualProducer.cs" />
+    <Compile Include="RabbitProducer.cs" />
+    <Compile Include="RabbitProducerFactory.cs" />
+    <Compile Include="Require\ExchangeTypeCollection.cs" />
+    <Compile Include="Require\FastAssignQueue.cs" />
+    <Compile Include="Require\NonRouteKey.cs" />
+    <Compile Include="Require\PassRouteKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Require\FairQueue.cs" />
+    <Compile Include="Require\DefaultExchange.cs" />
+    <Compile Include="Require\NamedExchange.cs" />
+    <Compile Include="Require\NondurableMessage.cs" />
+    <Compile Include="Require\PersistentMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MQ.Rabbit.Configuration\MQ.Rabbit.Configuration.csproj">
+      <Project>{faddf300-8b63-4be1-a18a-b7def69733a8}</Project>
+      <Name>MQ.Rabbit.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MQ.Rabbit.Message\MQ.Message.csproj">
+      <Project>{63d01fe6-6218-4080-9fef-30c39c5249b5}</Project>
+      <Name>MQ.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MQ.Rabbit.Require\MQ.Rabbit.Require.csproj">
+      <Project>{ae61312c-b58f-48c9-8d84-ed59ee677f77}</Project>
+      <Name>MQ.Rabbit.Require</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MQ.Round\MQ.Round.csproj">
+      <Project>{204794b5-a68c-49d9-ac57-121a6195d90f}</Project>
+      <Name>MQ.Round</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

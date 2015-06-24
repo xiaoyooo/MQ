@@ -47,7 +47,6 @@ namespace RabbitMq_Receiver
                     {
                         var eventargs = consumer.Queue.Dequeue();
 
-
                         var body = eventargs.Body;
 
                         var message = Encoding.UTF8.GetString(body);
